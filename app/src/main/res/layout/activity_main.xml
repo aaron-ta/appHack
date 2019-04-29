@@ -11,20 +11,24 @@
         android:id="@+id/borderU"
         android:layout_width="288.7dp"
         android:layout_height="49.3dp"
+        android:layout_below="@+id/imageView13"
         android:layout_alignStart="@+id/imageView13"
         android:layout_alignLeft="@+id/imageView13"
-        android:layout_alignParentTop="true"
         android:layout_marginStart="60dp"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="381dp"
+        android:layout_marginTop="59dp"
         app:srcCompat="@drawable/rounded_rectangle_p" />
 
     <ImageView
         android:id="@+id/borderU2"
         android:layout_width="288.7dp"
         android:layout_height="49.3dp"
-        android:layout_alignBottom="@+id/editPass"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/borderU"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_alignLeft="@+id/imageView13"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="29dp"
         app:srcCompat="@drawable/rounded_rectangle_p" />
 
 
@@ -33,10 +37,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/borderU2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignStart="@+id/imageView13"
+        android:layout_alignLeft="@+id/imageView13"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="147dp"
         android:background="@null"
         android:onClick="buttonPress"
         app:srcCompat="@drawable/rounded_rectangle_1" />
@@ -45,9 +50,9 @@
         android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/Boton"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="174dp"
+        android:layout_marginTop="25dp"
         app:srcCompat="@drawable/iniciar_sesion" />
 
     <ImageView
@@ -64,58 +69,49 @@
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="match_parent"
-        android:layout_height="360dp"
+        android:layout_height="220dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:src="@drawable/login_bg" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView13"
-        android:layout_alignLeft="@+id/imageView13"
-        android:layout_alignEnd="@+id/imageView13"
-        android:layout_alignRight="@+id/imageView13"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="138dp"
-        android:layout_marginLeft="138dp"
-        android:layout_marginTop="133dp"
-        android:layout_marginEnd="138dp"
-        android:layout_marginRight="138dp"
-        android:src="@drawable/logow" />
 
     <ImageView
         android:id="@+id/imageView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/editMail"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="3dp"
-        android:layout_toStartOf="@+id/editPass"
+        android:layout_alignStart="@+id/borderU"
+        android:layout_alignLeft="@+id/borderU"
+        android:layout_alignTop="@+id/borderU"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="7dp"
         android:src="@drawable/correo" />
 
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView12"
         android:layout_alignTop="@+id/borderU2"
-        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/borderU2"
+        android:layout_alignRight="@+id/borderU2"
         android:layout_marginStart="-4dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="252dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="249dp"
+        android:layout_marginRight="249dp"
         android:src="@drawable/pass_ico" />
 
     <EditText
         android:id="@+id/editPass"
         android:layout_width="227dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView12"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="238dp"
+        android:layout_below="@+id/borderU"
+        android:layout_alignStart="@+id/borderU2"
+        android:layout_alignLeft="@+id/borderU2"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="34dp"
         android:ems="10"
         android:hint="contraseña"
         android:inputType="textPersonName" />
@@ -124,29 +120,45 @@
         android:id="@+id/editMail"
         android:layout_width="227dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/borderU"
+        android:layout_alignLeft="@+id/borderU"
+        android:layout_alignTop="@+id/borderU"
         android:layout_alignBottom="@+id/borderU"
-        android:layout_alignEnd="@+id/imageView12"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="0dp"
         android:ems="10"
         android:hint="correo electronico"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:importantForAutofill="no" />
 
     <ImageView
         android:id="@+id/imageView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="97dp"
+        android:layout_below="@+id/Boton"
+        android:layout_alignStart="@+id/Boton"
+        android:layout_alignLeft="@+id/Boton"
+        android:layout_alignEnd="@+id/Boton"
+        android:layout_alignRight="@+id/Boton"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:src="@drawable/linea_separador" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="46dp"
-        android:onClick="callRegistro"
+        android:layout_below="@+id/imageView19"
+        android:layout_alignStart="@+id/Boton"
+        android:layout_alignLeft="@+id/Boton"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="29dp"
         app:srcCompat="@drawable/no_tienes_una_cuenta_reg_strate" />
 
 

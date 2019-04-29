@@ -26,33 +26,11 @@ public class PetitionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_petition);
         peticion = (Peticion) getIntent().getSerializableExtra("Peticion");
 
-        Context context = getApplicationContext();
-
-        String text = String.valueOf(peticion.getDescripcion());
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
         ImageAdapter adapter = new ImageAdapter(this);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(adapter.getCount()-1);
 
-        //asignar cada componente del layout
-        TextView peopleTextView = findViewById(R.id.peopleTextView);
-        TextView amountTextView = findViewById(R.id.amountTextView);
-        TextView titleTextView = findViewById(R.id.titleTextView);
-        ImageView iconImageView = findViewById(R.id.iconImageView);
-        ProgressBar pb = findViewById(R.id.progressBar);
-
-
-        //obtener valores para componentes del layout
-        titleTextView.setText(peticion.getTitulo());
-        peopleTextView.setText("Este proyecto ayuda a " +peticion.getNum_personas() + " personas");
-        amountTextView.setText(peticion.getDinero_pRecaudar()+" MXN recaudados de " + peticion.getDinero_tRecaudar() + " MXN");
-        int progress = (int) (1/(peticion.getDinero_pRecaudar() / peticion.getDinero_tRecaudar()));
-        pb.setProgress((progress*100));
 
         //dummy text para donadores
         DonorInfo donor1 = new DonorInfo("Leonardo", R.drawable.logo);
@@ -68,6 +46,24 @@ public class PetitionActivity extends AppCompatActivity {
         DonorInfo donor4 = new DonorInfo("Donatello", R.drawable.logo);
         donors.add(donor4);
         actualizar();
+        updateText();
+    }
+
+    public void updateText(){
+        //asignar cada componente del layout
+        TextView peopleTextView = findViewById(R.id.peopleTextView);
+        TextView amountTextView = findViewById(R.id.amountTextView);
+        TextView titleTextView = findViewById(R.id.titleTextView);
+        ImageView iconImageView = findViewById(R.id.iconImageView);
+        ProgressBar pb = findViewById(R.id.progressBar);
+
+
+        //obtener valores para componentes del layout
+        titleTextView.setText(peticion.getTitulo());
+        peopleTextView.setText("Este proyecto ayuda a " +peticion.getNum_personas() + " personas");
+        amountTextView.setText(peticion.getDinero_pRecaudar()+" MXN recaudados de " + peticion.getDinero_tRecaudar() + " MXN");
+        float progress = ((peticion.getDinero_pRecaudar() / peticion.getDinero_tRecaudar()));
+        pb.setProgress((int) (progress*100));
     }
 
     public void actualizar(){

@@ -37,12 +37,6 @@ public class NoticiasActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, PetitionActivity.class);
 
-        String text = String.valueOf(listaPeticiones.get(position).getDescripcion());
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
         intent.putExtra("Peticion", listaPeticiones.get(position));
         startActivity(intent);
     }
