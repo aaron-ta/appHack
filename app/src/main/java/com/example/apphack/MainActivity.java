@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             img.setVisibility(View.VISIBLE);
             logo = true;
         }
-        Intent intent = new Intent(this, PetitionActivity.class);
+        Intent intent = new Intent(this, BeneficiadoActivity.class);
         startActivity(intent);
     }
 

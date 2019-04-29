@@ -15,7 +15,7 @@ public class Beneficiado implements Serializable {
 
     public Beneficiado(String id_beneficiado, String nombre_clinica, String numero_cedula,
                        String telefono, String correo, String estado, String municipio,
-                       String id_paypal, Image foto, Date fecha_nacimiento) {
+                       String id_paypal, Date fecha_nacimiento) {
 
         this.id_beneficiado = id_beneficiado;
         this.nombre_clinica = nombre_clinica;
@@ -25,7 +25,7 @@ public class Beneficiado implements Serializable {
         this.estado = estado;
         this.municipio = municipio;
         this.id_paypal = id_paypal;
-        this.foto = foto;
+        //this.foto = foto;
         this.fecha_nacimiento = fecha_nacimiento;
     }
 

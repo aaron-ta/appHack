@@ -85,7 +85,7 @@
         android:layout_marginTop="133dp"
         android:layout_marginEnd="138dp"
         android:layout_marginRight="138dp"
-        android:src="@drawable/logow" />
+        />
 
     <ImageView
         android:id="@+id/imageView16"
