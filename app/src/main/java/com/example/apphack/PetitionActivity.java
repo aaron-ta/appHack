@@ -1,15 +1,21 @@
 package com.example.apphack;
 
-import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 import android.widget.TextView;
+
 
 public class PetitionActivity extends AppCompatActivity {
     //public String[] keys = new String[3];
+    public ArrayList<DonorInfo> donors = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,9 +58,33 @@ public class PetitionActivity extends AppCompatActivity {
        // fondo2ImageView.setImageResource(listado.imageF2);
         */
 
+        DonorInfo donor = new DonorInfo("Leonardo", R.drawable.logo);
+        donors.add(donor);
 
+        DonorInfo donor2 = new DonorInfo("Ldasdo", R.drawable.logo);
+        donors.add(donor2);
 
+        DonorInfo donor3 = new DonorInfo("Lebfbdfo", R.drawable.logo);
+        donors.add(donor3);
+        actualizar();
     }
 
+    public void actualizar(){
+        setContentView(R.layout.activity_petition);
+
+        final ListView listView = (ListView)findViewById(R.id.listViewIt);
+
+        DonorAdapter adapter = new DonorAdapter(getApplicationContext(),R.layout.row_view_donor, donors);
+
+        listView.setAdapter(adapter);
+
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                //callListing( position);
+            }
+        };
+        listView.setOnItemClickListener(listener);
+    }
 
 }

@@ -24,14 +24,16 @@ public class NoticiasActivity extends AppCompatActivity {
     private ArrayList<Peticion> getListaPeticiones ()
     {
         ArrayList<Peticion> listItems = new ArrayList<>();
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
-        listItems.add(new Peticion("Titulo","Descripcion",1,1.0f));
+        listItems.add(new Peticion("Titulo","Descripcion" +
+                "Lorem ipsum",1,
+                1.0f));
+        listItems.add(new Peticion("Titulo2","Descripcion",1,1.0f));
+        listItems.add(new Peticion("Titulo3","Descripcion",1,1.0f));
+        listItems.add(new Peticion("Titulo4","Descripcion",1,1.0f));
+        listItems.add(new Peticion("Titulo5","Descripcion",1,1.0f));
+        listItems.add(new Peticion("Titulo6","Descripcion",1,1.0f));
+        listItems.add(new Peticion("Titulo7","Descripcion",1,1.0f));
+        listItems.add(new Peticion("Titulo8","Descripcion",1,1.0f));
 
         return listItems;
     }

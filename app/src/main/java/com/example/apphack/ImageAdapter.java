@@ -36,7 +36,7 @@ public class ImageAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         View itemView = mLayoutInflater.inflate(R.layout.pager_item, container, false);
 
-        ImageView imageViewX = (ImageView) itemView.findViewById(R.id.imageView);
+        ImageView imageViewX = (ImageView) itemView.findViewById(R.id.bgImageView);
         imageViewX.setImageResource(GalImages[position]);
 
         container.addView(itemView);
