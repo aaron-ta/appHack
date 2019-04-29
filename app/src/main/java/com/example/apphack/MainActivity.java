@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
             logo = true;
         }
         Intent intent = new Intent(this, NoticiasActivity.class);
-        Intent intent = new Intent(this, BeneficiadoActivity.class);
         startActivity(intent);
     }
 
