@@ -68,7 +68,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/userTextView2"
+                    android:id="@+id/peopleTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/titleTextView"
@@ -82,7 +82,6 @@
                     android:ems="16"
                     android:gravity="center"
                     android:paddingLeft="5dp"
-                    android:text="Este proyecto ayuda a xxx personas"
                     android:textSize="16sp" />
 
                 <TextView
@@ -90,9 +89,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/iconImageView"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="23dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="25dp"
                     android:layout_toEndOf="@+id/iconImageView"
                     android:layout_toRightOf="@+id/iconImageView"
                     android:ems="10"
@@ -102,7 +101,7 @@
                     android:textSize="22sp" />
 
                 <TextView
-                    android:id="@+id/scoreTextView"
+                    android:id="@+id/amountTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/progressBar"
@@ -123,8 +122,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/iconImageView"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="1dp"
                     android:layout_toEndOf="@+id/iconImageView"
                     android:layout_toRightOf="@+id/iconImageView"
@@ -189,7 +188,7 @@
                     style="?android:attr/progressBarStyleHorizontal"
                     android:layout_width="65dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/userTextView2"
+                    android:layout_below="@+id/peopleTextView"
                     android:layout_alignStart="@+id/bgImageView"
                     android:layout_alignLeft="@+id/bgImageView"
                     android:layout_alignEnd="@+id/bgImageView"
