@@ -1,6 +1,8 @@
 package com.example.apphack;
 
-public class Peticion {
+import java.io.Serializable;
+
+public class Peticion implements Serializable {
 
     private String titulo,descripcion;
     private int num_personas;
