@@ -7,12 +7,14 @@ public class Peticion implements Serializable {
     private String titulo,descripcion;
     private int num_personas;
     private float dinero_pRecaudar;
+    private float dinero_tRecaudar;
 
-    public Peticion(String titulo, String descripcion, int num_personas, float dinero_pRecaudar) {
+    public Peticion(String titulo, String descripcion, int num_personas, float dinero_pRecaudar, float dinero_tRecaudar) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.num_personas = num_personas;
         this.dinero_pRecaudar = dinero_pRecaudar;
+        this.dinero_tRecaudar = dinero_tRecaudar;
     }
 
     public String getTitulo() {
@@ -43,7 +45,15 @@ public class Peticion implements Serializable {
         return dinero_pRecaudar;
     }
 
+    public float getDinero_tRecaudar() {
+        return dinero_tRecaudar;
+    }
+
     public void setDinero_pRecaudar(float dinero_pRecaudar) {
         this.dinero_pRecaudar = dinero_pRecaudar;
+    }
+
+    public void setDinero_tRecaudar(float dinero_tRecaudar) {
+        this.dinero_tRecaudar = dinero_tRecaudar;
     }
 }

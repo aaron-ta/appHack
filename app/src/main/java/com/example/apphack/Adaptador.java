@@ -40,6 +40,7 @@ public class Adaptador extends BaseAdapter {
 
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
+
         final Peticion item = (Peticion) getItem(position);
         convertView = LayoutInflater.from(contexto).inflate(R.layout.elemento_lista,null);
         TextView txtTitulo = (TextView) convertView.findViewById(R.id.txtTitulo);
@@ -48,15 +49,6 @@ public class Adaptador extends BaseAdapter {
         image.setImageResource(R.drawable.user_ico);
         txtTitulo.setText(item.getTitulo());
         txtDescripcion.setText(item.getDescripcion());
-        image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent intentPeticion = new Intent(contexto,PetitionActivity.class);
-                intentPeticion.putExtra("Peticion",listItems.get(position));
-                contexto.startActivity(intentPeticion);
-            }
-        });
-
 
         return convertView;
     }
